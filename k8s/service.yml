@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: k8s-angular-svc
+  labels:
+    app: k8s-angular
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 80
+      targetPort: 80
+  selector:
+    app: k8s-angular

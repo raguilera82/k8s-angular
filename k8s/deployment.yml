@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: k8s-angular
+  labels:
+    app: k8s-angular
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: k8s-angular
+  template:
+    metadata:
+      labels:
+        app: k8s-angular
+    spec:
+      containers:
+        - name: k8s-angular
+          image: raguilera82/k8s-angular:1.0
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
+          resources:
+            requests:
+              memory: "64Mi"
+              cpu: "250m"
+            limits:
+              memory: "128Mi"
+              cpu: "500m"
