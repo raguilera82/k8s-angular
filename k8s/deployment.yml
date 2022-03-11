@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: k8s-angular
+  namespace: raguilera82
   labels:
     app: k8s-angular
 spec:
