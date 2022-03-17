@@ -17,7 +17,10 @@ spec:
     spec:
       containers:
         - name: k8s-angular
-          image: raguilera82/k8s-angular:1.0
+          image: raguilera82/k8s-angular:0.0.1
+          volumeMounts:
+            - name: config
+              mountPath: /usr/share/nginx/html/assets/config
           imagePullPolicy: Always
           ports:
             - containerPort: 80
@@ -28,3 +31,7 @@ spec:
             limits:
               memory: "128Mi"
               cpu: "500m"
+      volumes:
+        - name: config
+          configMap:
+            name: k8s-angular-config
