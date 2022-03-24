@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: k8s-angular-svc
-  namespace: raguilera82
+  namespace: <[usuario]>
   labels:
     app: k8s-angular
 spec:

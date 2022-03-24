@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: k8s-angular
-  namespace: raguilera82
+  namespace: <[usuario]>
   labels:
     app: k8s-angular
 spec:
@@ -17,11 +17,11 @@ spec:
     spec:
       containers:
         - name: k8s-angular
-          image: raguilera82/k8s-angular:0.0.1
+          image: <[usuario]>/k8s-angular:0.0.1
           volumeMounts:
             - name: config
               mountPath: /usr/share/nginx/html/assets/config
-          imagePullPolicy: Always
+          imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 80
           resources:

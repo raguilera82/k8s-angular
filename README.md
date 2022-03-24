@@ -14,19 +14,3 @@ Para el taller presencial se utilizará una instancia de Kubernetes en la nube, 
 ## Simulación de HTTPS en local (Opcional)
 
 Además si se desea simular dominios HTTPS en local se deberá tener instalado mkcert, siguiendo esta guía: <https://github.com/FiloSottile/mkcert>
-
-### Creación de los certificados
-
-Tenemos que crear los certificados en local:
-
-```sh
-$> mkcert k8sangular.local.com
-```
-
-### Creación del secreto en Kubernetes
-
-Crear el secreto con los dos ficheros creados:
-
-```sh
-$> kubectl create secret tls tls-secret --cert k8sangular.local.com.pem --key k8sangular.local.com-key.pem -n raguilera82
-```

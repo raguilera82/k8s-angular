@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: k8s-angular-config
-  namespace: raguilera82
+  namespace: <[usuario]>
 data:
   config.json: |
     {
