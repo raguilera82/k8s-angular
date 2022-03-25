@@ -1,8 +1,5 @@
-FROM node:16.14.0-alpine3.14 as builder
-RUN mkdir /ng-app
-WORKDIR /ng-app
+FROM ng:1.0 as builder
 COPY . .
-RUN npm ci
 RUN npm run build -- --output-path=dist
 
 FROM nginx:1.21.6-alpine

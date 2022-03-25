@@ -10,8 +10,10 @@
 2- Creación de la imagen k8sangular:0.0.1
 
 - [ ] Explicar el contenido del Dockerfile
+- [ ] Crear la imagen <[usuario]>/k8sangular:0.0.1
+  - $> docker build -t <[usuario]>/k8sangular:0.0.1 .
 - [ ] Probar la imagen
-  - $> docker run -d -p 8888:80 k8sangular:0.0.1
+  - $> docker run -d -p 8888:80 <[usuario]>/k8sangular:0.0.1
 - [ ] Si se va desplegar fuera de local, publicar imagen
   - $> docker login (credenciales docker hub)
   - $> docker push <[usuario]>/k8sangular:0.0.1
@@ -53,3 +55,12 @@
   - $> mkcert k8sangular.local.com
 - [ ] Registramos el secreto con los certificados
   - $> kubectl create secret tls tls-secret --cert k8sangular.local.com.pem --key k8sangular.local.com-key.pem -n <[usuario]>
+
+7- Desarrollo dentro de Kubernetes
+
+- [ ] Instalamos el CLI de Okteto
+- [ ] Vamos a la carpeta okteto del proyecto
+- [ ] Ejecutamos $> okteto up
+- [ ] Dentro del terminal creado levantamos la aplicación
+  - [ ] $> npm run start:k8s
+- [ ] Comprobamos que cualquier cambio se ve inmediatamente reflejado en k8s

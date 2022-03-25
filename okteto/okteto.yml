@@ -1,0 +1,17 @@
+name: k8s-angular
+image: ng:1.0
+imagePullPolicy: IfNotPresent
+namespace: raguilera82
+command: sh
+workdir: /ng-app
+volumes:
+  - /ng-app/node_modules
+sync:
+  - ..:/ng-app
+resources:
+  requests:
+    memory: "512Mi"
+    cpu: "250m"
+  limits:
+    memory: "1024Mi"
+    cpu: "500m"
