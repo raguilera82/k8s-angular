@@ -1,7 +1,7 @@
 name: k8s-angular
 image: ng:1.0
 imagePullPolicy: IfNotPresent
-namespace: raguilera82
+namespace: <[usuario]>
 command: sh
 workdir: /ng-app
 volumes:
