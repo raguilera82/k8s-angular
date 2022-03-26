@@ -1,4 +1,4 @@
-FROM ng:1.0 as builder
+FROM raguilera82/ng:1.0 as builder
 COPY . .
 RUN npm run build -- --output-path=dist
 

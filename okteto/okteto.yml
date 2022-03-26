@@ -1,5 +1,5 @@
 name: k8s-angular
-image: ng:1.0
+image: raguilera82/ng:1.0
 imagePullPolicy: IfNotPresent
 namespace: <[usuario]>
 command: sh
